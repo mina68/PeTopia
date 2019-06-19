@@ -1,0 +1,77 @@
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + .inputfile-label {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+    color: #d3394c;
+    border: 1px solid #d3394c;
+    background-color: #fff;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.inputfile:focus + .inputfile-label,
+.inputfile.has-focus + .inputfile-label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + .inputfile-label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.inputfile:focus + .inputfile-label,
+.inputfile.has-focus + .inputfile-label,
+.inputfile + .inputfile-label:hover {
+    border-color: #722040;
+}
+
+.inputfile + .inputfile-label span,
+.inputfile + .inputfile-label strong {
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.inputfile + .inputfile-label span {
+    width: 200px;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.inputfile + .inputfile-label strong {
+    height: 100%;
+    color: #fff;
+    background-color: #d3394c;
+    display: inline-block;
+}
+
+.inputfile:focus + .inputfile-label strong,
+.inputfile.has-focus + .inputfile-label strong,
+.inputfile + .inputfile-label:hover strong {
+    background-color: #722040;
+}
+
+@media screen and (max-width: 50em) {
+	.inputfile + .inputfile-label strong {
+		display: block;
+	}
+}
